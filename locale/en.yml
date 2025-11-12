@@ -1,0 +1,18 @@
+acpl-mobile-tab:
+  admin:
+    available_items: "Available items"
+    active_items: "Active items"
+  forum:
+
+  lib:
+    item:
+      home: "Home"
+      all_discussions: "Discussions"
+      categories: "Categories"
+      notifications: "Notifications"
+      session: "Session"
+      search: "Search"
+      log_in: "Log In"
+      profile: "Profile"
+      tags: "Tags"
+      messages: "Messages"

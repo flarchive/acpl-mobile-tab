@@ -1,0 +1,30 @@
+@import "./components/MobileTab";
+
+.MobileTabAvailableItems-list {
+  list-style: none;
+  padding-left: 0;
+  gap: 1em;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+
+  > li {
+    flex-basis: 33%;
+  }
+}
+
+.MobileTabPreview {
+  position: static;
+
+  @media @tablet-up {
+    display: block;
+  }
+
+  &-items {
+    > li {
+      .Button {
+        background: none;
+      }
+    }
+  }
+}
