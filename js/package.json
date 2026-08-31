@@ -1,0 +1,40 @@
+{
+  "name": "@acpl/mobile-tab",
+  "private": true,
+  "prettier": "@flarum/prettier-config",
+  "devDependencies": {
+    "@flarum/prettier-config": "^1.0.0",
+    "@types/mithril": "^2.2.9",
+    "flarum-tsconfig": "^1.0.3",
+    "flarum-webpack-config": "^2.0.2",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
+    "typescript-coverage-report": "^1.1.1",
+    "webpack": "^5.110.2",
+    "webpack-cli": "^7.2.3"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "format": "prettier --write src",
+    "format-check": "prettier --check src",
+    "analyze": "cross-env ANALYZER=true pnpm run build",
+    "clean-typings": "pnx rimraf dist-typings && mkdir dist-typings",
+    "build-typings": "pnpm run clean-typings && ([ -e src/@types ] && cp -r src/@types dist-typings/@types || true) && tsc && pnpm run post-build-typings",
+    "check-typings": "tsc --noEmit --emitDeclarationOnly false",
+    "check-typings-coverage": "typescript-coverage-report",
+    "post-build-typings": "find dist-typings -type f -name '*.d.ts' -print0 | xargs -0 sed -i 's,../src/@types,@types,g'"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=11.24.0 <12.0.0",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": ">=24.18.0",
+      "onFail": "warn"
+    }
+  }
+}
