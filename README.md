@@ -4,7 +4,16 @@ This repository is a permanent, read-only archive of released versions of `acpl/
 
 > **Not affiliated with the Flarum Foundation or the Flarum project.**
 
-- Archived versions are stored as tags: `archive/vX.Y.Z`
+## Quick Download
+
+- **Latest Archived Version:** `2.0.0`
+- **Flarum Compatibility:** `^2.0.0-rc.4`
+- **Direct Download (.zip):** [Download 2.0.0 (.zip)](https://github.com/flarchive/acpl-mobile-tab/archive/refs/tags/archive/v2.0.0.zip)
+- **All Releases & Tags:** [View All Releases & Tags](https://github.com/flarchive/acpl-mobile-tab/tags)
+
+## Archive Catalog
+
+- **Catalog Entry (JSON):** [View manifest](https://github.com/flarchive/archive-index/blob/main/packages/acpl-mobile-tab.json)
 - Upstream repository: https://github.com/android-com-pl/mobile-tab.git
 - Issues, pull requests, discussions, and wiki are disabled on this repository.
 
